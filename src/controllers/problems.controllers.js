@@ -1,29 +1,35 @@
-function pingProblemControllers(req,res){
-    return res.json({message: 'problems controller is up'});
+const { StatusCodes } = require('http-status-codes');
+
+function pingProblemControllers(req, res) {
+    return res.json({ message: 'problems controller is up' });
 }
 
-function addProblem(res , req){
-    return res.status(501).json({
+function addProblem(req, res) {
+    return res.status(StatusCodes.NOT_IMPLEMENTED).json({
         message: "Not implemented"
     });
 }
-function getProblem(res , req){
-    return res.status(501).json({
+
+function getProblem(req, res) {
+    return res.status(StatusCodes.NOT_IMPLEMENTED).json({
         message: "Not implemented"
     });
 }
-function getListOfProblems(res , req){
-    return res.status(501).json({
+
+function getListOfProblems(req, res) {
+    return res.status(StatusCodes.NOT_IMPLEMENTED).json({
         message: "Not implemented"
     });
 }
-function deleteProblem(res , req){
-    return res.status(501).json({
+
+function deleteProblem(req, res) {
+    return res.status(StatusCodes.NOT_IMPLEMENTED).json({
         message: "Not implemented"
     });
 }
-function updateProblem(res , req){
-    return res.status(501).json({
+
+function updateProblem(req, res) {
+    return res.status(StatusCodes.NOT_IMPLEMENTED).json({
         message: "Not implemented"
     });
 }
@@ -35,4 +41,4 @@ module.exports = {
     deleteProblem,
     updateProblem,
     pingProblemControllers
-}
+};
