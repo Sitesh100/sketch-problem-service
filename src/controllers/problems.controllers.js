@@ -1,5 +1,6 @@
 const { StatusCodes } = require('http-status-codes');
 const BadRequest = require('../errors/badrequest.error');
+const Forbidden = require('../errors/forbidden.error');
 const NotImplemented = require('../errors/notImplemented.error')
 
 function pingProblemControllers(req, res) {
@@ -8,7 +9,7 @@ function pingProblemControllers(req, res) {
 
 function addProblem(req, res, next) {
     try{
-        throw new BadRequest('problem name', { message: "ok problem hai"});
+        throw new Forbidden('problem name', { message: "ok problem hai"});
     }catch(error){
         next(error);
     }
