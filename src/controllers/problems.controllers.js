@@ -9,7 +9,7 @@ function pingProblemControllers(req, res) {
 
 function addProblem(req, res, next) {
     try{
-        throw new Forbidden('problem name', { message: "ok problem hai"});
+        throw new BadRequest('problem name', { message: "ok problem hai"});
     }catch(error){
         next(error);
     }
