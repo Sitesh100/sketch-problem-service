@@ -18,7 +18,7 @@ app.use("/api", apiRouter);
 app.get("/ping", (req, res) => {
   return res.json({ message: "Ok" });
 });
-module.exports = connectToDB;
+
 //last middleware if any error comes.
 app.use(errorHandler);
 
